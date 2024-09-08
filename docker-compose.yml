@@ -1,0 +1,12 @@
+services:
+  db:
+    image: mysql/mysql-server:latest
+    container_name: devopspro-mysql
+    restart: always
+    environment:
+      - MYSQL_DATABASE=curso_db
+      - MYSQL_ROOT_PASSWORD=docker_pwd
+      - MYSQL_USR=docker_usr
+    ports:
+      - '3307:3306'
+    
